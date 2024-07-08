@@ -2,8 +2,6 @@
 
 It seems that $PORT is automatically handles by Heroku.
 
-
-
 ## Checklist
 
 - Terminal must be clean on parent
