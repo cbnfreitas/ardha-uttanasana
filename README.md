@@ -25,3 +25,7 @@ http://localhost:8000/static
 
 
 http://localhost:8000/#/ (carrega aqui, sem problemas)
+
+---
+
+https://docs.render.com/environment-variables#by-runtime
