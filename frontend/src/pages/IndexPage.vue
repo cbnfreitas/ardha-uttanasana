@@ -15,7 +15,7 @@ const message = ref('')
 
 const fetchData = async () => {
   try {
-    const response = await axios.get('/api/')
+    const response = await axios.get('http://backend:8000')
     message.value = response.data.message
   } catch (error) {
     message.value = 'Error fetching data'
