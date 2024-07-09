@@ -7,8 +7,6 @@ services:
     envVars:
       - key: PORT
         value: 8000
-    ports:
-      - port: 8000
 
   - type: web
     name: frontend
@@ -18,8 +16,3 @@ services:
     envVars:
       - key: PORT
         value: 80
-    ports:
-      - port: 9000  # Mapeando a porta 80 do contêiner para a porta 9000 no host
-
-networks:
-  - name: app-network
