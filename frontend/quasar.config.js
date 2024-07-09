@@ -8,9 +8,8 @@
 // Configuration for your app
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
 
-
 const { configure } = require('quasar/wrappers');
-
+console.log('RENDER_EXTERNAL_HOSTNAME:', process.env.RENDER_EXTERNAL_HOSTNAME);
 
 module.exports = configure(function (/* ctx */) {
   return {
@@ -60,7 +59,9 @@ module.exports = configure(function (/* ctx */) {
 
       // publicPath: '/',
       // analyze: true,
-      // env: {},
+      env: {
+        VITE_API_URL: process.env.RENDER_EXTERNAL_HOSTNAME
+      },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
