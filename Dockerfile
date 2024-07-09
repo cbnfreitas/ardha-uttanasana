@@ -4,8 +4,6 @@ FROM node:18-alpine as frontend-build
 # Set the working directory
 WORKDIR /frontend
 
-ARG RENDER_EXTERNAL_HOSTNAME=https://ardha-uttanasana.onrender.com/api
-
 # Copy frontend package.json and install dependencies
 COPY frontend/package*.json ./
 RUN npm install
