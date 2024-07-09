@@ -13,16 +13,13 @@ import axios from 'axios'
 
 const message = ref('')
 
-
+const apiUrl = process.env.VITE_API_URL
+console.log('apiUrl:', apiUrl)
 
 const fetchData = async () => {
   try {
-    const response = await axios.get('http://localhost:8000/api')
+    const response = await axios.get(`${apiUrl}/api`)
     message.value = response.data.message
-
-    const var1 = process.env.VITE_API_URL
-    console.log('var1:', var1)
-
   } catch (error) {
     message.value = 'Error fetching data'
   }

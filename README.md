@@ -20,10 +20,12 @@ docker ps
 docker build -t myapp:latest .
 docker build --no-cache -t myapp:latest .
 
+docker run -it -p 8000:8000 myapp:latest
+
+
 docker run -d -p 8000:8000 --name myapp-container myapp:latest
 docker logs -f myapp-container
 
-docker run -it -p 8000:8000 myapp:latest
 
 docker-go(){ docker exec -it $(docker ps --filter "name=$1" -q) sh; }
 docker-go myapp-container
