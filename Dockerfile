@@ -21,29 +21,15 @@ WORKDIR /app
 # Copy the Pipfile and Pipfile.lock to the working directory
 COPY backend/Pipfile* ./
 
-# Install pipenv
-RUN pip install pipenv
-
-# Install dependencies
-RUN pipenv install --system --deploy
+# Install pipenv and dependencies
+RUN pip install pipenv \
+    && pipenv install --system --deploy
 
 # Copy the rest of the backend code to the working directory
 COPY backend/ ./
 
-# Stage 3: Create the final container
-FROM python:3.12-slim
-
-# Set the working directory
-WORKDIR /app
-
-# Copy the backend from the backend build stage
-COPY --from=backend-build /app /app
-
 # Copy the frontend build files to a static folder in the backend
 COPY --from=frontend-build /frontend/dist/spa /app/static
-
-# Install dependencies for serving static files
-RUN pip install fastapi uvicorn
 
 # Expose the port the app runs on
 EXPOSE 8000
