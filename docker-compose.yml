@@ -11,9 +11,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "9000:9000"
-    volumes:
-      - ./frontend:/app
+      - "9000:80"  # Mapeando a porta 80 do contêiner para a porta 9000 no host
     networks:
       - app-network
 

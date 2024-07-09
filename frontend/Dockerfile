@@ -1,26 +1,17 @@
-# Dockerfile para Frontend
-FROM node:18-alpine
-
-# Definir diretório de trabalho
+# Development stage
+FROM node:18-alpine as develop-stage
 WORKDIR /app
-
-# Copiar package.json e package-lock.json
 COPY package*.json ./
-
-# Instalar dependências
-RUN npm install
-
-# Copiar o código da aplicação
+RUN yarn global add @quasar/cli
 COPY . .
 
-# Compilar o projeto para produção
-RUN npm run build
+# Build stage
+FROM develop-stage as build-stage
+RUN yarn
+RUN quasar build
 
-# Instalar um servidor HTTP simples para servir a aplicação
-RUN npm install -g http-server
-
-# Expor a porta que o HTTP Server utilizará
-EXPOSE 8080
-
-# Comando para rodar a aplicação
-CMD ["http-server", "dist", "-p", "8080"]
+# Production stage
+FROM nginx:1.23.2-alpine as production-stage
+COPY --from=build-stage /app/dist/spa /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
