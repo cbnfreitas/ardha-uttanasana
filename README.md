@@ -52,7 +52,7 @@ Live links:
 - On "Run and debug" (Ctrl+Shift+D), selected Backend
 - Hit F5 and go to http://localhost:8000/api - It should stop in your breakpoint
 
-![alt text](.\images\image-1.png)
+![alt text](./images/image-1.png)
 
 ### Frontend setup
 - `cd frontend`
@@ -71,7 +71,7 @@ Live links:
 - On "Run and debug" (Ctrl+Shift+D), selected "Frontend"
 - Hit F5 and go to http://localhost:9000/ . If you click on fetch data button, it should stop in your breakpoint.
 
-![alt text](.\images\image-2.png)
+![alt text](./images/image-2.png)
 
 ## Run docker locally (optional)
 - On the root folder of this project, in the integrated terminal 
@@ -79,7 +79,7 @@ Live links:
 - `docker run -it --rm -p 8000:8000 --name myapp-container myapp:latest`
 - If everything is fine, you'll see the following in the browser once you click in the button.
 
-![alt text](.\images\image.png)
+![alt text](./images/image.png)
 
 - Frontend: http://localhost:8000/ 
 - Backend:http://localhost:8000/api
@@ -91,7 +91,7 @@ Live links:
 - All default configurations.
 - Add BACKEND_ENV_VAR as secret. 
 
-![alt text](.\images\image-3.png)
+![alt text](./images/image-3.png)
 
 ## Lessons learned and notes
 
