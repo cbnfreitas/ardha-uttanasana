@@ -60,7 +60,7 @@ module.exports = configure(function (/* ctx */) {
       // publicPath: '/',
       // analyze: true,
       env: {
-        VITE_API_URL: process.env.RENDER_EXTERNAL_HOSTNAME || 'http://localhost:8000'
+        VITE_API_URL: process.env.RENDER_EXTERNAL_URL || 'http://localhost:8000'
       },
       // rawDefine: {}
       // ignorePublicFolder: true,
