@@ -22,6 +22,9 @@ FROM python:3.12-slim as backend-build
 # Set the working directory
 WORKDIR /app
 
+ARG BACKEND_ENV_VAR
+ENV BACKEND_ENV_VAR=${BACKEND_ENV_VAR}
+
 # Copy the Pipfile and Pipfile.lock to the working directory
 COPY backend/Pipfile* ./
 

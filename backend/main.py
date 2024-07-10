@@ -6,25 +6,23 @@ import os
 
 app = FastAPI()
 
-# Configurar CORS
-origins = [
-    "http://localhost",  # Adicione outros domínios conforme necessário
-    "http://localhost:9000",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=['*'],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Read environment variable
+backend_env_var = os.getenv("BACKEND_ENV_VAR", "No variable set!")  
 
 @app.get("/api")
-async def read_root():
-    return {"message": "Hello, World 3"}
+async def sample_route():
+    ''' Retrieves the content of the BACKEND_ENV_VAR
+    '''
+    return {"message": f"BACKEND_ENV_VAR content: {backend_env_var}"}
 
-
-# Mount the static files
+# Mount the static files in the frontend. 
+# Do it in the end, that is, after the other routes are defined, to avoid conflict.
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
