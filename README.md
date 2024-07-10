@@ -4,7 +4,7 @@ This is a "Hello World" using Python/[FastApi](https://fastapi.tiangolo.com/) in
 
 The main contribution here is to show how to integrate these technologies in two flavors:
 - Local run and debug with Vscode, for the sake of developer's life quality.
-- Deployment via a single Dockerfile. So, it can be easily deployed on platforms with free plans (like [Render](https://render.com/)) as a starting point.
+- Deployment via a single Dockerfile. So, **it can be easily deployed on platforms with free plans** (like [Render](https://render.com/)) as a starting point.
 
 > Ardha-uttanasana is a beginner friendly yoga posture, just like this repo 😉
 
@@ -24,7 +24,7 @@ Live links:
 ## Local run and debug
 
 - Frontend: http://localhost:9000/ 
-- Backend:http://localhost:8000/api
+- Backend: http://localhost:8000/api
 - Swagger: http://localhost:8000/docs
 
 ### Backend setup
@@ -43,7 +43,7 @@ Live links:
     "message": "BACKEND_ENV_VAR content: No variable set!"
 }`
 
-- If you quit the the app (CTRL+C) and change the BACKEND_ENV_VAR variable via terminal (`export BACKEND_ENV_VAR="hello world"`). This new value will appear on the response.
+- If you quit the app (CTRL+C) and change the BACKEND_ENV_VAR variable via terminal (`export BACKEND_ENV_VAR="hello world"`). This new value will appear on the response.
 - http://localhost:8000/docs should show the Swagger documentation.
 
 ### Backend debug
