@@ -1,17 +1,23 @@
+# ardha-uttanasana
 
+This repo contains a "Hello World" application with Python (FastApi) in the backend and VueJs (Quasar) in the frontend, running on a single container. The main contribution here is to show how to integrate these technologies in two flavors:
+- Local run and debug with Vscode, for the sake of developer's life quality. 😊
+- Deployment via a single Dockerfile. So, it can be easily deployed on platforms with free plans (like Render) as a starting point. 🤑
 
-# References
-https://docs.render.com/environment-variables#by-runtime
-https://quasar.dev/quasar-cli-webpack/handling-process-env#example
+## Requirements
+- Vscode
+- Git bash
+- Python 3.12
+- Node 18 or higher
 
+## Local run and debug
 
-# Local development and debug
+### Backend
+- Open the root folder of this project on VsCode and the integrated terminal (gitbash)
+- Run `mkdir .venv`
+- Run `pipenv install --dev`
 
-## Backend
-mkdir .venv
-pipenv install --dev
-
-## Frontend
+### Frontend
 
 
 # Run docker locally
