@@ -20,7 +20,10 @@ docker ps
 docker build -t myapp:latest .
 docker build --no-cache -t myapp:latest .
 
-docker run -it -p 8000:8000 myapp:latest
+docker build --build-arg RENDER_EXTERNAL_HOSTNAME=abobora -t myapp:latest .
+docker build --no-cache --build-arg RENDER_EXTERNAL_HOSTNAME=abobora -t myapp:latest .
+
+docker run -it -p 8000:8000 --name myapp-container
 
 
 docker run -d -p 8000:8000 --name myapp-container myapp:latest
@@ -32,6 +35,9 @@ docker-go myapp-container
 exit
 
 docker stop myapp-container
+##
+alias docker-clean='docker container stop $(docker container ls -aq); docker system prune --volumes -a --force'
+
 ##
 
 http://localhost:8000/api

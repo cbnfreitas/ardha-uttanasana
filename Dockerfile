@@ -4,9 +4,13 @@ FROM node:18-alpine as frontend-build
 # Set the working directory
 WORKDIR /frontend
 
+ARG RENDER_EXTERNAL_HOSTNAME
+
 # Copy frontend package.json and install dependencies
 COPY frontend/package*.json ./
 RUN npm install
+
+ENV RENDER_EXTERNAL_HOSTNAME=${RENDER_EXTERNAL_HOSTNAME}
 
 # Copy the rest of the frontend code and build it
 COPY frontend/ ./
