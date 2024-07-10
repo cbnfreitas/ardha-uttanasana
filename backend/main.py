@@ -20,7 +20,8 @@ backend_env_var = os.getenv("BACKEND_ENV_VAR", "No variable set!")
 async def sample_route():
     ''' Retrieves the content of the BACKEND_ENV_VAR
     '''
-    return {"message": f"BACKEND_ENV_VAR content: {backend_env_var}"}
+    return {"message": 
+            f"BACKEND_ENV_VAR content: {backend_env_var}"}
 
 # Check if the static directory exists before mounting. For local development and debug, it won't be available.
 if os.path.isdir("static"):
