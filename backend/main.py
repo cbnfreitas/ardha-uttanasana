@@ -22,6 +22,10 @@ async def sample_route():
     '''
     return {"message": f"BACKEND_ENV_VAR content: {backend_env_var}"}
 
-# Mount the static files in the frontend. 
-# Do it in the end, that is, after the other routes are defined, to avoid conflict.
-app.mount("/", StaticFiles(directory="static", html=True), name="static")
+# Check if the static directory exists before mounting. For local development and debug, it won't be available.
+if os.path.isdir("static"):
+    # Mount the static files in the frontend. 
+    # Do it in the end, that is, after the other routes are defined, to avoid conflict.
+    app.mount("/", StaticFiles(directory="static", html=True), name="static")
+else:
+    print("Static directory not found. Skipping mounting of static files.")
