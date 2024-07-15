@@ -11,7 +11,7 @@ The main contribution here is to show how to integrate these technologies in two
 
 > Ardha-uttanasana is a beginner friendly yoga posture, just like this repo 😉
 
-Live links:
+Live links: (This is a free hosting. It can take up to 1min to start.)
 - Frontend: https://ardha-uttanasana.onrender.com
 - Backend: https://ardha-uttanasana.onrender.com/api
 - Swagger: https://ardha-uttanasana.onrender.com/docs

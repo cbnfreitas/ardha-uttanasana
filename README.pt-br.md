@@ -11,7 +11,7 @@ A principal contribuição aqui é mostrar como integrar essas tecnologias de du
 
 > Ardha-uttanasana é uma postura de yoga amigável para iniciantes, assim como este repositório 😉
 
-Links do deploy:
+Links do deploy: (Hospedagem grátis. Pode demorar até 1min para a iniciar.)
 - Frontend: https://ardha-uttanasana.onrender.com
 - Backend: https://ardha-uttanasana.onrender.com/api
 - Swagger: https://ardha-uttanasana.onrender.com/docs
