@@ -1,8 +1,5 @@
 # Ardha-uttanasana
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](./README.md)
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](./README.pt-br.md)
-
 This is a "Hello World" using Python/[FastApi](https://fastapi.tiangolo.com/) in the backend and VueJs/[Quasar](https://quasar.dev/) in the frontend, running in a single container. 
 
 The main contribution here is to show how to integrate these technologies in two flavors:
@@ -108,4 +105,3 @@ Live links: (This is a free hosting. It can take up to 1min to start.)
 
 - If you need a full-stack template, please refer to https://github.com/tiangolo/full-stack-fastapi-template ❤️
 
-- Thanks to https://github.com/jonatasemidio/multilanguage-readme-pattern for the hint about multi-language doc.
